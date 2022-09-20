@@ -3,8 +3,16 @@
 <a id="Pname" >
   {{Product.name}}
 </a><br>
-<p id="pDescription">Description: {{Product.description}}</p><br>
-<button style="background-color:blue">
+<p id="pDescription" *ngIf="Product.description">
+  Description: {{Product.description}}
+</p><br>
+
+<button style="background-color:blue" (click)="onShare()">
   <span style="color:white;">Share</span>
 </button><br>
+<app-product-alerts
+[product]="Product"
+(notify)="onNotify()">
+</app-product-alerts><br>
 </span>
+

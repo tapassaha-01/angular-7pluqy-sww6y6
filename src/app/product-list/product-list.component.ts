@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
               'price':1200},
               {'name':'Phone Mini',
               'description':'A large phone with onr of the best cameras',
-              'price':800},
+              'price':700},
               {'name':'Phone standerd',
               'description':'A large phone with onr of the best value and performance',
               'price':500},
@@ -21,4 +21,10 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onShare(){
+    alert("Your Product is been Shared!");
+  }
+  onNotify(){
+    alert("You will be notified...");
+  }
 }
